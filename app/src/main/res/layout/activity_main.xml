@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:title="@string/app_name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/colorThemesHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Color themes"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
+
+        <RadioGroup
+            android:id="@+id/colorThemesOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/option_default_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Default" />
+
+            <RadioButton
+                android:id="@+id/option_dynamic_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dynamic" />
+
+            <RadioButton
+                android:id="@+id/option_orange_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Orange" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/themeModeHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Theme Mode"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
+
+        <RadioGroup
+            android:id="@+id/themeModeOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/option_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Day" />
+
+            <RadioButton
+                android:id="@+id/option_night"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Night" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@drawable/add"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</LinearLayout>
