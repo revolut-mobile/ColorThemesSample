@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
@@ -14,7 +14,7 @@
         <item name="dynamicColorThemeOverlay">@style/ThemeOverlay.Material3.DynamicColors.Light</item>
     </style>
 
-    <style name="ColorThemeOverlay"/>
+    <style name="ColorThemeOverlay" />
 
     <style name="ColorThemeOverlay.Orange">
         <item name="colorPrimary">@color/orange</item>

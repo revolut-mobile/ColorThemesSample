@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setColorThemeToggles() {
-        val currentTheme = requireNotNull(DynamicColorsActivityCallbacks.colorTheme)
+        val currentTheme = requireNotNull(ColorThemesController.colorTheme)
         val defaultThemeSelected = currentTheme == ColorTheme.DEFAULT
         val dynamicThemeSelected = currentTheme == ColorTheme.DYNAMIC
         val orangeThemeSelected = currentTheme == ColorTheme.ORANGE
@@ -68,10 +68,9 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun setColorTheme(colorTheme: ColorTheme) {
-        if (DynamicColorsActivityCallbacks.colorTheme == colorTheme) return
+        if (ColorThemesController.colorTheme == colorTheme) return
         themesStorage.setColorTheme(colorTheme)
-        DynamicColorsActivityCallbacks.colorTheme = colorTheme
-        ActivitiesController.recreateActivities()
+        ColorThemesController.applyColorTheme(colorTheme)
     }
 
     private fun setThemeModeToggles() {

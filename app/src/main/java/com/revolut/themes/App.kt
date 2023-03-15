@@ -14,8 +14,7 @@ class App : Application() {
         setDayNightMode()
         setColorTheme()
 
-        ActivitiesController.initialize(this)
-        registerActivityLifecycleCallbacks(DynamicColorsActivityCallbacks)
+        ColorThemesController.initialize(this)
     }
 
     private fun setDayNightMode() {
@@ -28,8 +27,8 @@ class App : Application() {
     }
 
     private fun setColorTheme() {
-        DynamicColorsActivityCallbacks.colorTheme =
-            themesStorage.getColorTheme() ?: ColorTheme.DEFAULT
+        val colorTheme = themesStorage.getColorTheme() ?: ColorTheme.DEFAULT
+        ColorThemesController.applyColorTheme(colorTheme)
     }
 
 }
