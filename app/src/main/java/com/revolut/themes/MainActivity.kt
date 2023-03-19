@@ -87,16 +87,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun observeThemeModeSelection() {
-        dayModeRadioButton.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                themesStorage.setDarkModeApplied(false)
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            }
-        }
         nightModeRadioButton.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                themesStorage.setDarkModeApplied(true)
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             }
         }
     }

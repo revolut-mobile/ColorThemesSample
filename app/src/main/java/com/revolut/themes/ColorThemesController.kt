@@ -35,8 +35,7 @@ object ColorThemesController {
                     activity.theme.applyStyle(R.style.ColorThemeOverlay_Orange, true)
                 }
                 ColorTheme.DEFAULT -> {
-                    //simply apply default style
-                    activity.theme.applyStyle(R.style.AppTheme, true)
+                    //do nothing, we'll use the activity theme
                 }
             }
             activities.add(activity)
