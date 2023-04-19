@@ -18,6 +18,7 @@ object ColorThemesController {
     fun initialize(application: Application) {
         if (!initialized) {
             initialized = true
+            //Registering the callback allows us to listen and react to the lifecycle of every app activity.
             application.registerActivityLifecycleCallbacks(ActivityCallbacks())
         }
     }

@@ -5,6 +5,6 @@
 
     <color name="blue">#0666EB</color>
     <color name="blue_dark">#0A84FF</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
 </resources>

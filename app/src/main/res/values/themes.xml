@@ -1,15 +1,11 @@
 <resources>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">#0666EB</item>
+        <item name="colorPrimary">@color/blue</item>
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
         <item name="colorSecondary">?attr/colorPrimary</item>
         <item name="colorOnSecondary">?attr/colorOnPrimary</item>
-        <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimary</item>
-        <!-- Customize your theme here. -->
 
         <item name="dynamicColorThemeOverlay">@style/ThemeOverlay.Material3.DynamicColors.Light</item>
     </style>
