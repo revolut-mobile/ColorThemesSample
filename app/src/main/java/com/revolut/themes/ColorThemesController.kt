@@ -11,7 +11,7 @@ import java.util.*
 object ColorThemesController {
 
     private val activities = Collections.newSetFromMap(WeakHashMap<Activity, Boolean>())
-    var initialized = false
+    private var initialized = false
     var colorTheme = ColorTheme.DEFAULT
         private set
 
